@@ -22,7 +22,6 @@ class ListaTableViewController: UITableViewController {
         lista.dataSource = self
         
     }
-
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped me")
@@ -42,7 +41,7 @@ class ListaTableViewController: UITableViewController {
         }
        
        cell.textLabel?.text = data[indexPath.row].nome //Indica qual nome do array será printado
-       cell.textLabel?.textColor = UIColor(red: 0.308, green: 0.14, blue: 0.356, alpha: 100) //Muda a cor dos Títulos
+       cell.textLabel?.textColor = UIColor(red: 0.308, green: 0.14, blue: 0.356, alpha: 100) //Muda a cor dos Títulos 
        cell.detailTextLabel?.text = data[indexPath.row].nomeCientifico // Indica qual nome Científico do array será printado
        let indicator = UIImage(named: "Indicator.pdf")  // Importa uma imagem personalizada do diclosureIndicator, pois o mesmo não pode ser editado
        cell.accessoryType = .disclosureIndicator

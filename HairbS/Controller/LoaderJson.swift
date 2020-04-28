@@ -16,7 +16,7 @@ public class LoaderJson {
         load()
         sort()
     }
-    
+    // Função que carrega o arquivo HairbS.json
     func load() {
         if let fileLocation = Bundle.main.url(forResource: "HairbS", withExtension: "json") {
             
@@ -31,7 +31,7 @@ public class LoaderJson {
             }
         }
     }
-    
+    // Ordena os nomes em ordem alfabética
     func sort() {
     
     self.itemData = self.itemData.sorted {
