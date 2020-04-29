@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="140"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zqz-3Z-sX5">
+                    <rect key="frame" x="20" y="0.0" width="42" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="6gI-mi-Seo">
+                    <rect key="frame" x="0.0" y="50" width="300" height="90"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Yrx-vC-bgK">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kNB-qO-cvb">
+                    <rect key="frame" x="221" y="0.0" width="59" height="20"/>
+                    <state key="normal" title="Ver mais">
+                        <color key="titleColor" red="0.30196078430000001" green="0.12549019610000001" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="6gI-mi-Seo" secondAttribute="trailing" id="5S3-Gb-lw0"/>
+                <constraint firstItem="6gI-mi-Seo" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="9t6-U6-vJ6"/>
+                <constraint firstItem="6gI-mi-Seo" firstAttribute="top" secondItem="zqz-3Z-sX5" secondAttribute="bottom" constant="20" id="A7f-qG-WyQ"/>
+                <constraint firstItem="6gI-mi-Seo" firstAttribute="top" secondItem="kNB-qO-cvb" secondAttribute="bottom" constant="20" id="EDJ-qF-8Z0"/>
+                <constraint firstItem="kNB-qO-cvb" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="KOs-hM-ahS"/>
+                <constraint firstAttribute="bottom" secondItem="6gI-mi-Seo" secondAttribute="bottom" id="S5d-Tj-cXR"/>
+                <constraint firstItem="zqz-3Z-sX5" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="THf-dN-Sn2"/>
+                <constraint firstAttribute="trailing" secondItem="kNB-qO-cvb" secondAttribute="trailing" constant="20" id="nWb-VR-2Ds"/>
+                <constraint firstItem="zqz-3Z-sX5" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="um6-rC-kRY"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="137.68115942028987" y="-153.34821428571428"/>
+        </view>
+    </objects>
+</document>

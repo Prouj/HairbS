@@ -30,7 +30,6 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
         setUpSearchBar()
         
     }
-
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.titleNav = currentData[indexPath.row].nome!
@@ -60,6 +59,7 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
         let indicator = UIImage(named: "Indicator.pdf")  // Importa uma imagem personalizada do diclosureIndicator, pois o mesmo não pode ser editado
         cell.accessoryType = .disclosureIndicator
         cell.accessoryView = UIImageView(image: indicator!)
+
        
 
         return cell
