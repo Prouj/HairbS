@@ -161,7 +161,7 @@
                                                     <color key="titleColor" red="0.30196078431372547" green="0.12549019607843137" blue="0.34901960784313724" alpha="1" colorSpace="calibratedRGB"/>
                                                 </state>
                                                 <connections>
-                                                    <segue destination="lxw-8I-ZQI" kind="show" id="1cz-Ui-GGu"/>
+                                                    <segue destination="lxw-8I-ZQI" kind="show" identifier="showFavLista" id="1cz-Ui-GGu"/>
                                                 </connections>
                                             </button>
                                         </subviews>
