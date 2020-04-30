@@ -16,18 +16,27 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <searchBar key="tableHeaderView" contentMode="redraw" id="9Mj-Ji-qTT">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>Todos</string>
+                                <string>Plantas</string>
+                                <string>Óleos</string>
+                                <string>Argilas</string>
+                            </scopeButtonTitles>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="dvU-vY-G8a">
-                                <rect key="frame" x="0.0" y="72" width="375" height="43.5"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dvU-vY-G8a" id="cLC-nk-tww">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="pzW-7H-5Ds" kind="show" identifier="showDescription" id="6Sh-g3-Iwh"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -37,6 +46,7 @@
                     </tableView>
                     <connections>
                         <outlet property="lista" destination="318-GS-Jyj" id="fi5-5n-kTf"/>
+                        <outlet property="search" destination="9Mj-Ji-qTT" id="4Jh-S2-IV3"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WNj-oP-ZAb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -57,7 +67,17 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6N-Id-jjS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104.8" y="31.934032983508249"/>
+            <point key="canvasLocation" x="1129" y="32"/>
+        </scene>
+        <!--Descricao-->
+        <scene sceneID="C6u-Pl-WuN">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Descricao" id="pzW-7H-5Ds" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ZSS-wx-Ovk"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tZn-g7-pg7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1804" y="-63"/>
         </scene>
     </scenes>
 </document>
