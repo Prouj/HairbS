@@ -9,7 +9,6 @@
 import UIKit
 
 class ListaTableViewController:UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
-
     
     @IBOutlet var lista: UITableView!
     

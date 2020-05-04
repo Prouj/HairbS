@@ -8,6 +8,11 @@
 
 import UIKit
 
+
+protocol CellDelegate {
+    func didTapButton(in cell: CollectionTableViewCell)
+}
+
 class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     
@@ -27,14 +32,17 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     
     var data: [ItemData] = []
     
+    var delegate: CellDelegate?
+    
     //Defini o título da seção da table
     func titulo(title: String) {
         self.headerTitle.text = title
     }
     
     //Faz o carregamento da collectionView a partir do array data
-    func configure(with data: [ItemData]) {
+    func configure(with data: [ItemData], delegate: CellDelegate) {
         self.data = data
+        self.delegate = delegate
         collectionView.reloadData()
     }
     
@@ -53,7 +61,11 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         super.awakeFromNib()
         collectionView.delegate = self
         collectionView.dataSource = self
-        
+        headerButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
+    }
+    
+    @objc func tap() {
+        delegate?.didTapButton(in: self)
     }
     
     // COLLECTION VIEW
@@ -86,5 +98,8 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         }
     }
 }
+    
+    
+
 
 
