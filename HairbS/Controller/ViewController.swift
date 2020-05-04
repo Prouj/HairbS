@@ -9,11 +9,11 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet var table: UITableView!
     
     let data = LoaderJson().itemData
-
+    
     //Filtra os dados que serão apresentados em cada linha da tableView
     let filtroPopular = {(data: [ItemData], filtro: String) -> [ItemData] in
         var 👀: [ItemData] = []
@@ -36,7 +36,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+        
         table.separatorStyle = UITableViewCell.SeparatorStyle.none
         table.register(CollectionTableViewCell.nib(), forCellReuseIdentifier: CollectionTableViewCell.identifier)
         table.delegate = self
@@ -45,7 +45,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     // TABLE FUNCTIONS
     
-
+    
     //Retorna o número de linhas por seção da tableView
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 4
@@ -62,24 +62,24 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 0:
             cell.titulo(title: "Populares")
             cell.register(My2CollectionViewCell.self)
-            cell.configure(with: populares)
+            cell.configure(with: populares, delegate: self)
         case 1:
             cell.titulo(title: "Favoritos")
             cell.register(MyCollectionViewCell.self)
-            cell.configure(with: favoritos)
+            cell.configure(with: favoritos, delegate: self)
         case 2:
             cell.titulo(title: "Plantas")
             cell.register(MyCollectionViewCell.self)
-            cell.configure(with: plantas)
+            cell.configure(with: plantas, delegate: self)
         case 3:
             cell.titulo(title: "Argilas")
             cell.register(MyCollectionViewCell.self)
-            cell.configure(with: argilas)
+            cell.configure(with: argilas, delegate: self)
         default:
             cell.titulo(title: "😵")
         }
         
-
+        
         //Desativa a animação de toque da tableView
         cell.selectionStyle = .none
         
@@ -96,6 +96,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
+}
+
+
+extension ViewController: CellDelegate {
+    func didTapButton(in cell: CollectionTableViewCell) {
+        print(#function)
+        table.indexPath(for: cell)
+        print(table.indexPath(for: cell)!)
+        let storyboard = UIStoryboard(name: "Lista", bundle: .main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "listaViewController") as! ListaTableViewController
+        // configurar coisas da ListaTableViewContorller injetando os dados
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
+        
+        
+    }
 }
 
 
