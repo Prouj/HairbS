@@ -15,65 +15,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="O5x-cc-cPr">
-                                <rect key="frame" x="20" y="64" width="280" height="200"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kpd-79-pqH">
-                                        <rect key="frame" x="20" y="20" width="63" height="63"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="63" id="EfK-28-xZT"/>
-                                            <constraint firstAttribute="width" constant="63" id="qf8-r7-cVm"/>
-                                        </constraints>
-                                    </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" text="sajhkjsahdahdkjasdhkjashdkashdkjashdkjashdka" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bLz-om-6Gj">
-                                        <rect key="frame" x="20" y="107" width="240" height="93"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="93" id="Ddm-wM-qBT"/>
-                                        </constraints>
-                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
-                                </subviews>
-                                <color key="backgroundColor" red="0.97819644210000001" green="0.91049247980000003" blue="0.85564219949999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G1O-kZ-MRY" customClass="DescricaoCard" customModule="HairbS" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="335" height="413"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hHt-jN-l0t">
-                                <rect key="frame" x="123" y="108.5" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vc-eB-dfs">
-                                <rect key="frame" x="123" y="89" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfX-WZ-r7P">
-                                <rect key="frame" x="24" y="288" width="280" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Botão cabelo"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ewM-Y3-0OZ">
-                                <rect key="frame" x="24" y="366" width="280" height="60"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="Botão Pele"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IE1-Qm-kbk">
+                                <rect key="frame" x="147" y="453" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <segue destination="HRt-IH-BEP" kind="show" id="wc5-0i-MkD"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="kae-j4-kuZ" firstAttribute="bottom" secondItem="IE1-Qm-kbk" secondAttribute="bottom" constant="184" id="0vQ-YN-NpF"/>
+                            <constraint firstItem="G1O-kZ-MRY" firstAttribute="leading" secondItem="kae-j4-kuZ" secondAttribute="leading" constant="20" id="3c0-KK-Uif"/>
+                            <constraint firstItem="kae-j4-kuZ" firstAttribute="trailing" secondItem="G1O-kZ-MRY" secondAttribute="trailing" constant="20" id="NKs-jL-3Kr"/>
+                            <constraint firstItem="IE1-Qm-kbk" firstAttribute="top" secondItem="G1O-kZ-MRY" secondAttribute="bottom" constant="20" id="TV6-Bc-v5Y"/>
+                            <constraint firstItem="IE1-Qm-kbk" firstAttribute="leading" secondItem="kae-j4-kuZ" secondAttribute="leading" constant="147" id="axO-hs-mIo"/>
+                            <constraint firstItem="IE1-Qm-kbk" firstAttribute="top" secondItem="G1O-kZ-MRY" secondAttribute="bottom" constant="20" id="b5J-oB-L0e"/>
+                            <constraint firstItem="G1O-kZ-MRY" firstAttribute="top" secondItem="kae-j4-kuZ" secondAttribute="top" constant="20" id="wXA-rM-dLe"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="kae-j4-kuZ"/>
                     </view>
+                    <connections>
+                        <outlet property="descricaoCardView" destination="G1O-kZ-MRY" id="KqN-J1-cTu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RU6-UG-yFN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="275.625" y="-52.816901408450704"/>
+            <point key="canvasLocation" x="274.39999999999998" y="-53.523238380809602"/>
+        </scene>
+        <!--Detalhes-->
+        <scene sceneID="oTO-cf-Vzh">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Detalhes" id="HRt-IH-BEP" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ejz-HY-Eov"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fC9-5s-p9l" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="36"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="Botão Pele" width="1440" height="340"/>
-        <image name="Botão cabelo" width="1440" height="340"/>
-    </resources>
 </document>

@@ -10,23 +10,39 @@ import UIKit
 
 class DescricaoViewController: UIViewController {
     
-    var titleNav = ""
-
+    @IBOutlet weak var descricaoCardView: DescricaoCard!
+    
+    
+    var item = ItemData() //variavel que recebe as informações do item selecionado na tableView
+    
     override func viewDidLoad() {
+        
         super.viewDidLoad()
-        title = titleNav
+        
+        let image = UIImage(named: "AppIcon") //vai mudar quando tiver o banco das imagens
+        descricaoCardView.imageView.image = image
+        descricaoCardView.imageView.layer.cornerRadius = 48 //porque o tamanha padrão da imagem é 96x96
+        
+        //seta os valores dos objetos de acordo com o json
+        
+        guard let nome = item.nome, let descricao = item.text else {
+            return
+        }
+        descricaoCardView.nomeLabel.text = nome
+        descricaoCardView.descricaoTextView.text = descricao
+        title = nome
+        
+        guard let nomeCientifico = item.nomeCientifico else {
+            descricaoCardView.nomeCientificoLabel.isHidden = true
+            return
+        }
+        descricaoCardView.nomeCientificoLabel.text = nomeCientifico
         // Do any additional setup after loading the view.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    //envia informações pra tela de detalhes
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let detalhes = segue.destination as! DetalhesViewController
+        detalhes.detalhes = item.pele!
     }
-    */
 
 }
