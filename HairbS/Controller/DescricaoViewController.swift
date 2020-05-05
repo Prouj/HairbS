@@ -30,9 +30,11 @@ class DescricaoViewController: UIViewController {
             peleButton.isHidden = true
         }
         
-        let image = UIImage(named: "AppIcon") //vai mudar quando tiver o banco das imagens
-        descricaoCardView.imageView.image = image
-        descricaoCardView.imageView.layer.cornerRadius = 48 //porque o tamanha padrão da imagem é 96x96
+        let imageName = item.nomeImagem ?? "Erro"
+        let image = UIImage(named: imageName) //pega a imagem no assets
+        
+        descricaoCardView.imageView.image = image //seta a imagem no imageView
+        descricaoCardView.imageView.layer.cornerRadius = 48 //porque o tamanha padrão da imageView é 96x96
         
         //seta os valores dos objetos de acordo com o json
         
