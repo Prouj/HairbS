@@ -12,12 +12,23 @@ class DescricaoViewController: UIViewController {
     
     @IBOutlet weak var descricaoCardView: DescricaoCard!
     
+    @IBOutlet weak var peleButton: UIButton!
+    
+    @IBOutlet weak var cabeloButton: UIButton!
     
     var item = ItemData() //variavel que recebe as informações do item selecionado na tableView
     
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        //verifica se possui detalhes para pele e cabelo, caso não exista esconde os botões
+        if item.cabelo == nil{
+            cabeloButton.isHidden = true
+        }
+        if item.pele == nil{
+            peleButton.isHidden = true
+        }
         
         let image = UIImage(named: "AppIcon") //vai mudar quando tiver o banco das imagens
         descricaoCardView.imageView.image = image
@@ -41,8 +52,18 @@ class DescricaoViewController: UIViewController {
     }
     //envia informações pra tela de detalhes
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let detalhes = segue.destination as! DetalhesViewController
-        detalhes.detalhes = item.pele!
+        guard let id = segue.identifier else {return}
+        
+        switch id {
+        case "segueDescricaoPele":
+            let detalhes = segue.destination as! DetalhesViewController
+            detalhes.detalhes = item.pele!
+        case "segueDescricaoCabelo":
+            let detalhes = segue.destination as! DetalhesViewController
+            detalhes.detalhes = item.cabelo!
+        default:
+            break
+        }
     }
 
 }
