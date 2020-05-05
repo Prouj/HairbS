@@ -100,18 +100,36 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
 
 extension ViewController: CellDelegate {
+    // verifica se clicou no botão ver mais e direciona para tela de Lista
     func didTapButton(in cell: CollectionTableViewCell) {
-        print(#function)
-        table.indexPath(for: cell)
-        print(table.indexPath(for: cell)!)
+        //print(#function)
+        //print(table.indexPath(for: cell)!)
+        
         let storyboard = UIStoryboard(name: "Lista", bundle: .main)
         let viewController = storyboard.instantiateViewController(withIdentifier: "listaViewController") as! ListaTableViewController
         // configurar coisas da ListaTableViewContorller injetando os dados
         
         self.navigationController?.pushViewController(viewController, animated: true)
+    }
+    
+    // verifica se clicou em uma célula da collection e direciona para tela de descrição
+    func didSelectItem(in collection: MyCell) {
+        let storyboard = UIStoryboard(name: "Descricao", bundle: .main)
+        let viewController = storyboard.instantiateViewController(withIdentifier: "DescricaoViewController") as! DescricaoViewController
         
+        // configurar coisas da DescricaoViewController injetando os dados
+        let name = collection.getName()
+        for i in 0...data.count {
+            if data[i].nome == name {
+                viewController.item = data[i]
+                break
+            }
+        }
+        
+        self.navigationController?.pushViewController(viewController, animated: true)
         
     }
+    
 }
 
 

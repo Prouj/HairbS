@@ -13,4 +13,5 @@ protocol MyCell: UICollectionViewCell {
     static var identifier: String { get }
     static func nib() -> UINib
     func configure(with data: ItemData)
+    func getName() -> String
 }
