@@ -31,6 +31,10 @@ class MyCollectionViewCell: UICollectionViewCell, MyCell {
         self.myLabel.text = data.nome
     }
     
+    public func getName() -> String {
+        return myLabel.text!
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layer.cornerRadius = 10

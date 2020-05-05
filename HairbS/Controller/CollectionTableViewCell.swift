@@ -11,6 +11,7 @@ import UIKit
 
 protocol CellDelegate {
     func didTapButton(in cell: CollectionTableViewCell)
+    func didSelectItem(in collection: MyCell)
 }
 
 class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -97,9 +98,13 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
             return CGSize(width: 275, height: 150)
         }
     }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let cell = collectionView.cellForItem(at: indexPath)
+        delegate?.didSelectItem(in: cell as! MyCell)
+    }
+    
+    
 }
-    
-    
-
-
 
