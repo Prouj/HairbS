@@ -11,6 +11,7 @@ import Foundation
 // Struct que contem a estrutura do Json
 // Extende o protocolo Codable, para permitir que o Json seja decodificado
 struct ItemData: Codable {
+    var popular: Bool?
     var nome: String?
     var nomeCientifico: String?
     var tipo: String?
@@ -19,4 +20,8 @@ struct ItemData: Codable {
     var cabelo: String?
     var pele: String?
     var fonte: String?
+    var minText: String?
+    var nomeImagem: String?
+    var fonteImagem: String?
+    var nomeImagemPopular: String?
 }
