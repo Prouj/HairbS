@@ -79,17 +79,15 @@ class DescricaoViewController: UIViewController {
             favButton.setImage(UIImage(named: "Favorito-Selected"), for: .normal)
         }
 
-//        var data = LoaderJson().itemData
-//        for i in 0...data.count {
-//            if data[i].nome == item.nome {
-//                data[i].favorito = item.favorito
-//                break
-//            }
-//        }
-//        let fileLocation = Bundle.main.url(forResource: "HairbS", withExtension: "json")
-//        let encoder = JSONEncoder()
-//        let update = try? encoder.encode(data)
-//        try? JSONSerialization.data(withJSONObject: update!).write(to: fileLocation!)
+        var data = LoaderJson().itemData
+        for i in 0...data.count {
+            if data[i].nome == item.nome {
+                data[i].favorito = item.favorito
+                break
+            }
+        }
+        
+        LoaderJson().save(update: data)
     }
     
     //envia informações pra tela de detalhes

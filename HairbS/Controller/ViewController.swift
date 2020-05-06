@@ -12,10 +12,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     @IBOutlet var table: UITableView!
     
-    let data = LoaderJson().itemData
+    var data = LoaderJson().itemData
     
     //Filtra os dados que serão apresentados em cada linha da tableView
-    let filtroPopular = {(data: [ItemData], filtro: String) -> [ItemData] in
+    func filtro(data: [ItemData], filtro: String) -> [ItemData] {
         var 👀: [ItemData] = []
         if filtro == "popular" {
             👀 = data.filter({$0.popular==true})
@@ -29,11 +29,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return 👀
     }
     
-    lazy var populares = filtroPopular(data, "popular")
-    lazy var favoritos = filtroPopular(data, "favoritos")
-    lazy var plantas = filtroPopular(data, "plantas")
-    lazy var argilas = filtroPopular(data, "argila")
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,6 +36,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         table.register(CollectionTableViewCell.nib(), forCellReuseIdentifier: CollectionTableViewCell.identifier)
         table.delegate = self
         table.dataSource = self
+    }
+    
+    // Recarrega o json e a tableviw
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        data = LoaderJson().itemData
+        table.reloadData()
     }
     
     // TABLE FUNCTIONS
@@ -62,19 +64,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 0:
             cell.titulo(title: "Populares")
             cell.register(My2CollectionViewCell.self)
-            cell.configure(with: populares, delegate: self)
+            cell.configure(with: filtro(data: self.data, filtro: "popular"), delegate: self)
         case 1:
             cell.titulo(title: "Favoritos")
             cell.register(MyCollectionViewCell.self)
-            cell.configure(with: favoritos, delegate: self)
+            cell.configure(with: filtro(data: self.data, filtro: "favoritos"), delegate: self)
         case 2:
             cell.titulo(title: "Plantas")
             cell.register(MyCollectionViewCell.self)
-            cell.configure(with: plantas, delegate: self)
+            cell.configure(with: filtro(data: self.data, filtro: "plantas"), delegate: self)
         case 3:
             cell.titulo(title: "Argilas")
             cell.register(MyCollectionViewCell.self)
-            cell.configure(with: argilas, delegate: self)
+            cell.configure(with: filtro(data: self.data, filtro: "argila"), delegate: self)
         default:
             cell.titulo(title: "😵")
         }
