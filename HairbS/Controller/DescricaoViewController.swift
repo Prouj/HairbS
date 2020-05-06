@@ -21,6 +21,26 @@ class DescricaoViewController: UIViewController {
     override func viewDidLoad() {
         
         super.viewDidLoad()
+
+        
+        // Cria um botão modelo e suas configurações
+        let favButton = UIButton(type: .custom)
+        favButton.frame = CGRect(x: 0.0, y: 0.0, width: 20, height: 20)
+        if item.favorito == false {
+            favButton.setImage(UIImage(named:"Favorito"), for: .normal)
+        } else {
+            favButton.setImage(UIImage(named: "Favorito-Selected"), for: .normal)
+        }
+        favButton.addTarget(self, action: #selector(myRightSideBarButtonItemTapped(favButton:_:)), for: UIControl.Event.touchUpInside)
+        
+        // Seta o botão modelo como um botão da Navigation Bar
+        let favBarButton = UIBarButtonItem(customView: favButton)
+        let currWidth = favBarButton.customView?.widthAnchor.constraint(equalToConstant: 24)
+        currWidth?.isActive = true
+        let currHeight = favBarButton.customView?.heightAnchor.constraint(equalToConstant: 24)
+        currHeight?.isActive = true
+      
+        self.navigationItem.rightBarButtonItem = favBarButton
         
         //verifica se possui detalhes para pele e cabelo, caso não exista esconde os botões
         if item.cabelo == nil{
@@ -52,6 +72,26 @@ class DescricaoViewController: UIViewController {
         descricaoCardView.nomeCientificoLabel.text = nomeCientifico
         // Do any additional setup after loading the view.
     }
+    
+    @objc func myRightSideBarButtonItemTapped(favButton: UIButton,_ sender:UIBarButtonItem!) {
+        item.favorito = !item.favorito!
+        if item.favorito == false {
+            favButton.setImage(UIImage(named:"Favorito"), for: .normal)
+        } else {
+            favButton.setImage(UIImage(named: "Favorito-Selected"), for: .normal)
+        }
+
+        var data = LoaderJson().itemData
+        for i in 0...data.count {
+            if data[i].nome == item.nome {
+                data[i].favorito = item.favorito
+                break
+            }
+        }
+        
+        LoaderJson().save(update: data)
+    }
+    
     //envia informações pra tela de detalhes
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let id = segue.identifier else {return}
