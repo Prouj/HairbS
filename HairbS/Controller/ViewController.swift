@@ -106,11 +106,10 @@ extension ViewController: CellDelegate {
     func didTapButton(in cell: CollectionTableViewCell) {
         //print(#function)
         //print(table.indexPath(for: cell)!)
-        
         let storyboard = UIStoryboard(name: "Lista", bundle: .main)
         let viewController = storyboard.instantiateViewController(withIdentifier: "listaViewController") as! ListaTableViewController
         // configurar coisas da ListaTableViewContorller injetando os dados
-        
+        viewController.section = verificaIdNumero(nomeDoId: cell.getHeaderTitle())
         self.navigationController?.pushViewController(viewController, animated: true)
     }
     
@@ -131,7 +130,21 @@ extension ViewController: CellDelegate {
         self.navigationController?.pushViewController(viewController, animated: true)
         
     }
+    //verificar id numero de acordo com o nome do id da celula
+    func verificaIdNumero(nomeDoId: String?) -> Int{
+        switch nomeDoId {
+        case "Favoritos":
+            return 1
+        case "Plantas":
+            return 2
+        case "Argilas":
+            return 3
+        default:
+            return 0
+        }
+    }
     
 }
+
 
 
