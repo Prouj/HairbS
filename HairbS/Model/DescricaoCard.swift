@@ -37,7 +37,7 @@ class DescricaoCard: UIView {
         //setando a sombra da view
         contentView.layer.cornerRadius = 20
         contentView.layer.shadowColor = UIColor.black.cgColor
-        contentView.layer.shadowOffset = CGSize(width: 0, height: 1)
+        contentView.layer.shadowOffset = CGSize(width: 0, height: 0.4)
         contentView.layer.shadowOpacity = 0.2
         
         contentView.layer.shadowRadius = 20
