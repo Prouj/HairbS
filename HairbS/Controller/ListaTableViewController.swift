@@ -16,13 +16,12 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
     
     var section:Int? //recebe o id referente ao nome da seção clicada na tela inicial
     
-    let data = LoaderJson().itemData //Todos os dados do Json
+    var data = LoaderJson().itemData //Todos os dados do Json
     var currentItem = ItemData() //Salva os dados do item que vai ser passado pra tela de descrição
     var currentData = LoaderJson().itemData //Dados dos itens que vão ser carregados na tableView (altera de acordo com a pesquisa)
     
     
     override func viewDidLoad() {
-        super.viewDidLoad()
         
         title = "Lista"
         
@@ -30,9 +29,14 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
         lista.dataSource = self
         search.delegate = self
         
-        self.searchBar(search, selectedScopeButtonIndexDidChange: section ?? 0) //aprensentar a seção de acordo com a escolhida
-        search.selectedScopeButtonIndex = section ?? 0
+        carregaSection()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        data = LoaderJson().itemData //reload dos dados
         
+        carregaSection()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,7 +48,7 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
         tableView.deselectRow(at: indexPath, animated: true)
         performSegue(withIdentifier: "showDescription", sender: self)
     }
-//Função que cria a Célula da table View e indica o que será apresentado na mesma.
+    //Função que cria a Célula da table View e indica o que será apresentado na mesma.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) // Comando para reutilizar a célula criada.
        
@@ -77,7 +81,7 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
             return
         }
         //verifica se o texto digitado na searchbar é referente ao nome de algum item no json
-        currentData = data.filter({ itemData -> Bool in
+        currentData = currentData.filter({ itemData -> Bool in
             itemData.nome!.lowercased().contains(searchText.lowercased())
         })
         lista.reloadData() //atualiza a tableView
@@ -102,6 +106,14 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
         default:
             break
         }
+        section = selectedScope
+        lista.reloadData()
+    }
+    
+    //carrega o escopo e os dados que vão aparecer na table view
+    func carregaSection() {
+        self.searchBar(search, selectedScopeButtonIndexDidChange: section ?? 0)
+        search.selectedScopeButtonIndex = section ?? 0
         lista.reloadData()
     }
 }
