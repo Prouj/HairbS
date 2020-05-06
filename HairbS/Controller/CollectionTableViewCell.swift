@@ -105,6 +105,10 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         delegate?.didSelectItem(in: cell as! MyCell)
     }
     
+    func getHeaderTitle() -> String?{
+        return self.headerTitle.text
+    }
+    
     
 }
 

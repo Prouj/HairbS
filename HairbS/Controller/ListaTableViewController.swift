@@ -14,6 +14,8 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
     
     @IBOutlet weak var search: UISearchBar!
     
+    var section:Int? //recebe o id referente ao nome da seção clicada na tela inicial
+    
     let data = LoaderJson().itemData //Todos os dados do Json
     var currentItem = ItemData() //Salva os dados do item que vai ser passado pra tela de descrição
     var currentData = LoaderJson().itemData //Dados dos itens que vão ser carregados na tableView (altera de acordo com a pesquisa)
@@ -27,6 +29,9 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
         lista.delegate = self
         lista.dataSource = self
         search.delegate = self
+        
+        self.searchBar(search, selectedScopeButtonIndexDidChange: section ?? 0) //aprensentar a seção de acordo com a escolhida
+        search.selectedScopeButtonIndex = section ?? 0
         
     }
     
@@ -76,6 +81,28 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
             itemData.nome!.lowercased().contains(searchText.lowercased())
         })
         lista.reloadData() //atualiza a tableView
+    }
+    //função pra filtrar de acordo com o scopo selecionado
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        switch selectedScope {
+        case 0:
+            currentData = data
+        case 1:
+            currentData = data.filter({ itemData -> Bool in
+                itemData.favorito!
+            })
+        case 2:
+            currentData = data.filter({ itemData -> Bool in
+                itemData.tipo! == "planta"
+            })
+        case 3:
+        currentData = data.filter({ itemData -> Bool in
+            itemData.tipo! == "argila"
+        })
+        default:
+            break
+        }
+        lista.reloadData()
     }
 }
 
