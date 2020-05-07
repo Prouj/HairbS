@@ -14,15 +14,7 @@ public class LoaderJson {
     
     let directory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
     
-    let defaults = UserDefaults.standard
-    
     init() {
-        if defaults.bool(forKey: "First Launch") == true {
-            defaults.set(true, forKey: "First Launch")
-        } else {
-            loadInicial()
-            defaults.set(true, forKey: "First Launch")
-        }
         
         load()
         sort()
@@ -46,7 +38,6 @@ public class LoaderJson {
     
     // Função que carrega o arquivo HairbS.json
     func load() {
-        
         do {
             let data = try Data(contentsOf: directory.appendingPathComponent("HairbS.json"))
             let jsonDecoder = JSONDecoder()
@@ -86,13 +77,13 @@ public class LoaderJson {
     
     // Ordena os nomes em ordem alfabética
     func sort() {
-    
-    self.itemData = self.itemData.sorted {
-        var isSorted = false
-        if let first = $0.nome, let second = $1.nome {
-            isSorted = first < second
-        }
-        return isSorted
+        
+        self.itemData = self.itemData.sorted {
+            var isSorted = false
+            if let first = $0.nome, let second = $1.nome {
+                isSorted = first < second
+            }
+            return isSorted
         }
     }
 }
