@@ -17,7 +17,9 @@ public class LoaderJson {
     let defaults = UserDefaults.standard
     
     init() {
-        if defaults.bool(forKey: "First Launch") == false {
+        if defaults.bool(forKey: "First Launch") == true {
+            defaults.set(true, forKey: "First Launch")
+        } else {
             loadInicial()
             defaults.set(true, forKey: "First Launch")
         }
