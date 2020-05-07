@@ -73,7 +73,12 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     
     //Define o número de itens por seção
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        if headerTitle.text == "Populares"{
+            return data.count
+        } else if headerTitle.text == "Favoritos" {
+            return data.count
+        }
+        return 4
     }
     
     //Cria a célular da tableView
