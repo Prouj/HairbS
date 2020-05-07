@@ -44,7 +44,7 @@
     "nome": "Camomila",
     "nomeCientifico": "Matricaria recutita",
     "tipo": "planta",
-    "favorito": true,
+    "favorito": false,
     "minText": "Destaque nos benefícios para pele, ajudando pricipalmente na cicatrização.",
     "text": "O extrato aquoso de camomila possui atividade anti-inflamatória,, anti-eritematosa e antipruriginosa, assim reduzem o prurido e melhoram a velocidade de cicatrização da pele. Além disso, possui efeitos suavizantes e calmantes.",
     "pele": "Loções com extrato glicólico de camomila são bons para peles finas, sensíveis ou gretadas, e os cremes com o extrato também podem ser aplicados em peles gordas e acneicas. Além disso, o hidrolato dos capítulos florais em compressas pode ser aplicado em todos os tipos de pele, no combate de inflamações, e após forte exposição solar.",

@@ -16,6 +16,7 @@ protocol CellDelegate {
 
 class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    var imagem = UIImageView()
     
     static let identifier = "CollectionTableViewCell"
     
@@ -35,6 +36,28 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     
     var delegate: CellDelegate?
     
+    
+    
+    func favorito() {
+      
+        headerButton.isHidden = true
+        
+        let image : UIImage = UIImage(named:"NoFavorite")!
+        let imagem = UIImageView (image: image)
+        self.addSubview(imagem)
+        
+       imagem.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            imagem.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            imagem.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            imagem.topAnchor.constraint(equalTo: headerTitle.bottomAnchor, constant: 20),
+            imagem.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
+            
+        ])
+        
+    }
+    
     //Defini o título da seção da table
     func titulo(title: String) {
         self.headerTitle.text = title
@@ -53,8 +76,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         
         //Oculta o botão na seção de Populares
         if cellIdentifier == "My2CollectionViewCell" {
-            headerButton.isHidden = true
-        }
+            headerButton.isHidden = true       }
         collectionView.register(cellType.nib(), forCellWithReuseIdentifier: cellType.identifier)
     }
     //Carrega o nib das células da collection
@@ -68,6 +90,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     @objc func tap() {
         delegate?.didTapButton(in: self)
     }
+    
     
     // COLLECTION VIEW
     
@@ -91,7 +114,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     //Defini configuração de Layout da célula
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        //Altera o tamanho da célula dependando do tipo
+        //Altera o tamanho da célula dependendo do tipo
         if cellIdentifier == MyCollectionViewCell.identifier {
             return CGSize(width: 85, height: 100)
         } else {

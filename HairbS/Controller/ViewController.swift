@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var table: UITableView!
-    
+
     let data = LoaderJson().itemData
     
     //Filtra os dados que serão apresentados em cada linha da tableView
@@ -34,6 +34,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     lazy var plantas = filtroPopular(data, "plantas")
     lazy var argilas = filtroPopular(data, "argila")
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,6 +55,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //Cria as células da tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+
+        
         //Torna as células da tableView reutilizáveis
         let cell = table.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
         
@@ -65,8 +68,12 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.configure(with: populares, delegate: self)
         case 1:
             cell.titulo(title: "Favoritos")
-            cell.register(MyCollectionViewCell.self)
-            cell.configure(with: favoritos, delegate: self)
+            if favoritos.isEmpty {
+                cell.favorito()
+            } else{
+                cell.register(MyCollectionViewCell.self)
+                cell.configure(with: favoritos, delegate: self)
+            }
         case 2:
             cell.titulo(title: "Plantas")
             cell.register(MyCollectionViewCell.self)
