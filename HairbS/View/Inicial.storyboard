@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Inicial-->
+        <!--HairbS-->
         <scene sceneID="GNZ-MZ-bTP">
             <objects>
                 <viewController id="9kp-Pz-bK2" customClass="ViewController" customModule="HairbS" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,7 +29,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UTi-nc-d00"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Inicial" id="634-FQ-XLn"/>
+                    <navigationItem key="navigationItem" title="HairbS" id="634-FQ-XLn"/>
                     <connections>
                         <outlet property="table" destination="RbJ-MN-yxo" id="EtS-Tc-c3L"/>
                     </connections>

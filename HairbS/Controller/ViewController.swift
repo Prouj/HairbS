@@ -66,7 +66,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         //Indica qual será o conteúdo de acordo com a linha da tableView
         switch indexPath.row {
         case 0:
-            cell.titulo(title: "Populares")
+            cell.titulo(title: "Sugestões")
             cell.register(My2CollectionViewCell.self)
             cell.configure(with: filtro(data: self.data, filtro: "popular"), delegate: self)
         case 1:
