@@ -26,10 +26,8 @@
 		3AD434072460B92E0003F658 /* Inicial.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AD434062460B92E0003F658 /* Inicial.storyboard */; };
 		3AD7889324565973005C83F8 /* ListaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7889224565973005C83F8 /* ListaTableViewController.swift */; };
 		3AD7889724565B5F005C83F8 /* LoaderJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7889624565B5F005C83F8 /* LoaderJson.swift */; };
-		3AD7889924565D3F005C83F8 /* HairbS.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AD7889824565D3F005C83F8 /* HairbS.json */; };
-
+		5443B5D42463583200A6135D /* HairbS.json in Resources */ = {isa = PBXBuildFile; fileRef = 3AD7889824565D3F005C83F8 /* HairbS.json */; };
 		561AEDE52460F6A4005F158F /* Itens.swift in Sources */ = {isa = PBXBuildFile; fileRef = 561AEDE42460F6A4005F158F /* Itens.swift */; };
-
 		56CF20792458562000ED07AE /* DescricaoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CF20782458562000ED07AE /* DescricaoViewController.swift */; };
 		56E79A3E245B163900B23575 /* DescricaoCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56E79A3D245B163900B23575 /* DescricaoCard.xib */; };
 		56E79A40245B181200B23575 /* DescricaoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56E79A3F245B181200B23575 /* DescricaoCard.swift */; };
@@ -59,9 +57,7 @@
 		3AD7889224565973005C83F8 /* ListaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaTableViewController.swift; sourceTree = "<group>"; };
 		3AD7889624565B5F005C83F8 /* LoaderJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderJson.swift; sourceTree = "<group>"; };
 		3AD7889824565D3F005C83F8 /* HairbS.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = HairbS.json; sourceTree = "<group>"; };
-
 		561AEDE42460F6A4005F158F /* Itens.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Itens.swift; sourceTree = "<group>"; };
-
 		56CF20782458562000ED07AE /* DescricaoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoViewController.swift; sourceTree = "<group>"; };
 		56E79A3D245B163900B23575 /* DescricaoCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DescricaoCard.xib; sourceTree = "<group>"; };
 		56E79A3F245B181200B23575 /* DescricaoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescricaoCard.swift; sourceTree = "<group>"; };
@@ -115,9 +111,7 @@
 		3A26D43124507AF000C6277F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-
 				561AEDE42460F6A4005F158F /* Itens.swift */,
-
 				3AD433F1246060420003F658 /* My2CollectionViewCell.swift */,
 				3AD433F2246060420003F658 /* MyCell.swift */,
 				3AD433F3246060420003F658 /* MyCollectionViewCell.swift */,
@@ -212,11 +206,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5443B5D42463583200A6135D /* HairbS.json in Resources */,
 				3AD43403246061290003F658 /* Imagens.xcassets in Resources */,
 				3AD433FF246060B90003F658 /* MyCollectionViewCell.xib in Resources */,
 				56E79A3E245B163900B23575 /* DescricaoCard.xib in Resources */,
 				3AD433FE246060B90003F658 /* My2CollectionViewCell.xib in Resources */,
-				3AD7889924565D3F005C83F8 /* HairbS.json in Resources */,
 				3A26D43724507B4100C6277F /* Lista.storyboard in Resources */,
 				3A26D43924507B6500C6277F /* Descricao.storyboard in Resources */,
 				3A26D43B24507B7100C6277F /* Detalhes.storyboard in Resources */,
@@ -236,14 +230,11 @@
 			files = (
 				3AD433EF246060240003F658 /* ViewController.swift in Sources */,
 				56E79A42245B531900B23575 /* DetalhesViewController.swift in Sources */,
-
 				561AEDE52460F6A4005F158F /* Itens.swift in Sources */,
-
 				3AD433F6246060420003F658 /* MyCell.swift in Sources */,
 				3AD7889724565B5F005C83F8 /* LoaderJson.swift in Sources */,
 				56E79A40245B181200B23575 /* DescricaoCard.swift in Sources */,
 				3AD433F5246060420003F658 /* My2CollectionViewCell.swift in Sources */,
-				54AE211124618BF1004FC16E /* Itens.swift in Sources */,
 				3A26D41E24507A8D00C6277F /* AppDelegate.swift in Sources */,
 				3AD433F7246060420003F658 /* MyCollectionViewCell.swift in Sources */,
 				3A26D42024507A8D00C6277F /* SceneDelegate.swift in Sources */,
