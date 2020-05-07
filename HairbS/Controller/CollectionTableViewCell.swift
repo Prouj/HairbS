@@ -16,6 +16,7 @@ protocol CellDelegate {
 
 class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
+    var imagem = UIImageView()
     
     static let identifier = "CollectionTableViewCell"
     
@@ -35,6 +36,17 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     
     var delegate: CellDelegate?
     
+    
+    func emptyStateFavorito() {
+        headerButton.isHidden = true
+        imagem.isHidden = false
+    }
+    
+    func removeEmptyStateFavorito() {
+        imagem.isHidden = true
+        headerButton.isHidden = false
+    }
+    
     //Defini o título da seção da table
     func titulo(title: String) {
         self.headerTitle.text = title
@@ -53,8 +65,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         
         //Oculta o botão na seção de Populares
         if cellIdentifier == "My2CollectionViewCell" {
-            headerButton.isHidden = true
-        }
+            headerButton.isHidden = true       }
         collectionView.register(cellType.nib(), forCellWithReuseIdentifier: cellType.identifier)
     }
     //Carrega o nib das células da collection
@@ -63,17 +74,40 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         collectionView.delegate = self
         collectionView.dataSource = self
         headerButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        configureEmptyState()
+    }
+    
+    private func configureEmptyState() {
+        let image : UIImage = UIImage(named:"NoFavorite")!
+        imagem = UIImageView (image: image)
+        self.addSubview(imagem)
+        imagem.isHidden = true
+        
+        imagem.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            imagem.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            imagem.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            imagem.topAnchor.constraint(equalTo: headerTitle.bottomAnchor, constant: 20),
+            imagem.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
+        ])
     }
     
     @objc func tap() {
         delegate?.didTapButton(in: self)
     }
     
+    
     // COLLECTION VIEW
     
     //Define o número de itens por seção
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        if headerTitle.text == "Sugestões"{
+            return data.count
+        } else if headerTitle.text == "Favoritos" {
+            return data.count
+        }
+        return 4
     }
     
     //Cria a célular da tableView
@@ -91,7 +125,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     //Defini configuração de Layout da célula
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        //Altera o tamanho da célula dependando do tipo
+        //Altera o tamanho da célula dependendo do tipo
         if cellIdentifier == MyCollectionViewCell.identifier {
             return CGSize(width: 85, height: 100)
         } else {

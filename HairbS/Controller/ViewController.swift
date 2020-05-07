@@ -11,8 +11,10 @@ import UIKit
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var table: UITableView!
+
     
     var data = LoaderJson().itemData
+
     
     //Filtra os dados que serão apresentados em cada linha da tableView
     func filtro(data: [ItemData], filtro: String) -> [ItemData] {
@@ -56,19 +58,28 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     //Cria as células da tableView
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+
+        
         //Torna as células da tableView reutilizáveis
         let cell = table.dequeueReusableCell(withIdentifier: CollectionTableViewCell.identifier, for: indexPath) as! CollectionTableViewCell
         
         //Indica qual será o conteúdo de acordo com a linha da tableView
         switch indexPath.row {
         case 0:
-            cell.titulo(title: "Populares")
+            cell.titulo(title: "Sugestões")
             cell.register(My2CollectionViewCell.self)
             cell.configure(with: filtro(data: self.data, filtro: "popular"), delegate: self)
         case 1:
+            
             cell.titulo(title: "Favoritos")
             cell.register(MyCollectionViewCell.self)
             cell.configure(with: filtro(data: self.data, filtro: "favoritos"), delegate: self)
+            if filtro(data: self.data, filtro: "favoritos").isEmpty {
+                cell.emptyStateFavorito()
+            } else {
+                cell.removeEmptyStateFavorito()
+            }
+            
         case 2:
             cell.titulo(title: "Plantas")
             cell.register(MyCollectionViewCell.self)
