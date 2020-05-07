@@ -102,7 +102,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     
     //Define o número de itens por seção
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if headerTitle.text == "Populares"{
+        if headerTitle.text == "Sugestões"{
             return data.count
         } else if headerTitle.text == "Favoritos" {
             return data.count
