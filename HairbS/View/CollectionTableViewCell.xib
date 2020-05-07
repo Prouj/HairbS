@@ -23,9 +23,9 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EGQ-xg-9F7">
-                        <rect key="frame" x="304" y="20" width="63" height="20"/>
+                        <rect key="frame" x="316" y="15" width="41" height="30"/>
                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                        <state key="normal" title="Ver mais">
+                        <state key="normal" title="Listar">
                             <color key="titleColor" red="0.30196078430000001" green="0.12549019610000001" blue="0.34901960780000002" alpha="1" colorSpace="calibratedRGB"/>
                         </state>
                     </button>

@@ -9,6 +9,7 @@
 import UIKit
 
 class My2CollectionViewCell: UICollectionViewCell, MyCell {
+    
 
     @IBOutlet weak var myImage: UIImageView!
     
@@ -31,6 +32,10 @@ class My2CollectionViewCell: UICollectionViewCell, MyCell {
         self.myImage.image = UIImage(named: data.nomeImagemPopular ?? "Erro")
         self.myTitle.text = data.nome
         self.minText.text = data.minText
+    }
+    
+    public func getName() -> String {
+        return myTitle.text!
     }
     
     override func layoutSubviews() {

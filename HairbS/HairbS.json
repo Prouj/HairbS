@@ -6,9 +6,9 @@
     "tipo": "planta",
     "favorito": false,
     "minText": "Utilizada em cuidados para pele e cabelo, por oferecer uma excelente hidratação.",
-    "text": " A composição desta planta rica em mucilagens possui a característica de formar um gel que retém água e proporciona uma ação hidratante e protetora do tecido cutâneo. Além disso, esta planta possui uma ação anti- inflamatória, cicatrizante, anti-alérgica, antibacteriana, antiviral, hidratante e protetora dos raios UV.",
-    "cabelo": "A babosa possui enzimas que ajudam a remover células mortas no couro cabeludo, sendo útil no tratamento de caspas. Além disso, a babosa ajuda na produção de colágeno fixando melhor os fios de cabelo no couro cabeludo, e por possuir minerais e água é muito utilizada em procedimentos de hidratação.",
-    "pele": "Seus componentes podem estar presente em hidratantes e produtos de limpeza de pele. Além de cremes que apresentam ações calmantes, anti-inflamatória, hidratante, revitalizante, úteis em peles sensíveis, secas e desidratadas. Támbem são utilizados no tratamento da melasma, queimaduras, irritações da pele, cicatrizações e de alopecia.",
+    "text": "A composição desta planta rica em mucilagens possui a característica de formar um gel que retém água e proporciona uma ação hidratante e protetora do tecido cutâneo. Além disso, esta planta possui uma ação anti- inflamatória, cicatrizante, anti-alérgica, antibacteriana, antiviral, hidratante e protetora dos raios UV.",
+    "cabelo": "A babosa possui enzimas que ajudam a remover células mortas no couro cabeludo, sendo útil no tratamento de caspas. Além disso, a babosa ajuda na produção de colágeno fixando melhor os fios de cabelo no couro cabeludo, e por possuir minerais e água é muito utilizada em procedimentos de hidratação.\n\nFonte: bdigital.ufp",
+    "pele": "Seus componentes podem estar presente em hidratantes e produtos de limpeza de pele. Além de cremes que apresentam ações calmantes, anti-inflamatória, hidratante, revitalizante, úteis em peles sensíveis, secas e desidratadas. Támbem são utilizados no tratamento da melasma, queimaduras, irritações da pele, cicatrizações e de alopecia.\n\nFonte: bdigital.ufp",
     "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
     "fonteImagem":"teste",
     "nomeImagem": "Babosa",
@@ -21,7 +21,7 @@
     "tipo": "planta",
     "favorito": false,
     "text": "O óleo de calêndula é feito pela infusão de flores de calêndula em um óleo transportador sendo útil no alívio da dor, como hepatoprotetor, como anti-inflamatório e como agente antisséptico.",
-    "pele": " Loções faciais e preparações para cuidados da pele contendo extrato de calêndula são aplicados especialmente em peles sensíveis e secas, uma vez que estimulam a regeneração celular cutânea, e exercem um efeito calmante e relaxante, principalmente em pele irritada ou inflamada. São igualmente usados na acne e em afeções fungícas, particularmente pé de atleta.",
+    "pele": " Loções faciais e preparações para cuidados da pele contendo extrato de calêndula são aplicados especialmente em peles sensíveis e secas, uma vez que estimulam a regeneração celular cutânea, e exercem um efeito calmante e relaxante, principalmente em pele irritada ou inflamada. São igualmente usados na acne e em afeções fungícas, particularmente pé de atleta.\n\nFonte: sapientia.ualg.pt",
     "fonte": "https://sapientia.ualg.pt/bitstream/10400.1/8202/1/tesea22566.pdf",
     "fonteImagem":"teste",
     "nomeImagem": "Calendula"
@@ -33,8 +33,8 @@
     "tipo": "planta",
     "favorito": false,
     "text": "A aveia pode ser utilizada através da farinha de suas sementes, e do óleo extraído de sua semente. Ela possui ação emoliante e hidratante, além de ser utilizada no tratamento de dermatoses inflamatórias, eczema e queimaduras solares. Também possui propriedades anti-inflamatórias e hipoalergénica.",
-    "pele": "A aveia pode estar presente em cremes, loções e esfoliantes, atuando como anti-inflamatório, hidratante e tonificante. Na limpeza de pele, a utilização de esfoliante com farinha das sementes obtém melhores resultados, além de reduzir irritações.",
-    "cabelo": "Pode-se extrair o extrato aquoso da semente de aveia para utilizar na composição de shampoos, sendo melhores para lavagens frequentes, além de aumentarem o brilho e o volume do cabelo.",
+    "pele": "A aveia pode estar presente em cremes, loções e esfoliantes, atuando como anti-inflamatório, hidratante e tonificante. Na limpeza de pele, a utilização de esfoliante com farinha das sementes obtém melhores resultados, além de reduzir irritações.\n\nFonte: bdigital.ufp.pt",
+    "cabelo": "Pode-se extrair o extrato aquoso da semente de aveia para utilizar na composição de shampoos, sendo melhores para lavagens frequentes, além de aumentarem o brilho e o volume do cabelo.\n\nFonte: bdigital.ufp.pt",
     "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
     "fonteImagem":"teste",
     "nomeImagem": "Aveia"
@@ -44,11 +44,11 @@
     "nome": "Camomila",
     "nomeCientifico": "Matricaria recutita",
     "tipo": "planta",
-    "favorito": true,
+    "favorito": false,
     "minText": "Destaque nos benefícios para pele, ajudando pricipalmente na cicatrização.",
     "text": "O extrato aquoso de camomila possui atividade anti-inflamatória,, anti-eritematosa e antipruriginosa, assim reduzem o prurido e melhoram a velocidade de cicatrização da pele. Além disso, possui efeitos suavizantes e calmantes.",
-    "pele": "Loções com extrato glicólico de camomila são bons para peles finas, sensíveis ou gretadas, e os cremes com o extrato também podem ser aplicados em peles gordas e acneicas. Além disso, o hidrolato dos capítulos florais em compressas pode ser aplicado em todos os tipos de pele, no combate de inflamações, e após forte exposição solar.",
-    "cabelo": "Pode-se extrair o extrato glicólico de camomila para utilizar na composição de shampoos, que podem ser usados para aloirar cabelos claros, pela ação da apigenina.",
+    "pele": "Loções com extrato glicólico de camomila são bons para peles finas, sensíveis ou gretadas, e os cremes com o extrato também podem ser aplicados em peles gordas e acneicas. Além disso, o hidrolato dos capítulos florais em compressas pode ser aplicado em todos os tipos de pele, no combate de inflamações, e após forte exposição solar.\n\nFonte: bdigital.ufp.pt",
+    "cabelo": "Pode-se extrair o extrato glicólico de camomila para utilizar na composição de shampoos, que podem ser usados para aloirar cabelos claros, pela ação da apigenina.\n\nFonte: bdigital.ufp.pt",
     "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
     "fonteImagem":"teste",
     "nomeImagem": "Camomila",
@@ -56,14 +56,53 @@
     
   },
   {
+      "popular": false,
+      "nome": "Alecrim",
+      "nomeCientifico": "Rosmarinus officinalis",
+      "tipo": "planta",
+      "favorito": false,
+      "text": "O Óleo Essencial de Alecrim proporciona uma ação antissética e estimulante circulatória, também age como anti-inflamatório sendo muito utilizado em óleos de massagens. Além disso, o hidrolato apresenta ação antisséptica e de limpeza de pele.",
+      "cabelo": "Shampoos e condicionadores contendo extrato hidroalcóolico de Alecrim são úteis no combate de caspa, cálvice prematura e para escurecer o cabelo. Também é possível realizar o cozimento das folhas, para atuar como tonico capilar, sendo útil para cabelos oleosos, aumentando o brilho e restituindo sua cor natual.\n\nFonte: bdigital.ufp.pt",
+      "pele": "Cremes contendo extrato de alecrim são usados no tratamento de estrias e dermatite seborreica. Também são usadas as folhas ou partes floridas em banhos cosméticos, com ação ativadora da circulação e tonificante da pele.\n\nFonte: bdigital.ufp.pt",
+      "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
+      "fonteImagem":"https://bellafalconi.blogosfera.uol.com.br/2020/03/06/alecrim-e-erva-antioxidante-veja-alguns-beneficios-e-contraindicacoes/",
+      "nomeImagem": "Alecrim"
+  },
+  {
+      "popular": false,
+      "nome": "Arnica",
+      "nomeCientifico": "Arnica montana",
+      "tipo": "planta",
+      "favorito": false,
+      "text": "Essa planta possui ações antimicrobiana, analgésica, antiflogística, anti-edematosa, anti-equimótica e de ativação da circulação, sendo o seu óleo essencial realizador de boa parte dessas ações. Além disso, a combinação dessa planta com outras estimula o crescimento do cabelo.",
+      "pele": "Creme e loções contendo extrato glicólico são úteis na estimulação do tecido cutâneo, ao promover aumento da circulação sanguínea, auxiliando na reabsorção de fibrina, e ao reduzir irritações cutâneas como acne, furunculose, picadas de insetos e urticária. Além disso, também são úteis no combate a rugas, olheiras e celulites.\n\nFonte: bdigital.ufp.pt",
+      "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
+      "fonteImagem": "https://cuidai.com.br/arnica/",
+      "nomeImagem": "Arnica"
+  },
+  {
+      "popular": false,
+      "nome": "Jojoba",
+      "nomeCientifico": "Simmondsia chinensis",
+      "tipo": "planta",
+      "favorito": false,
+      "text": "A cera dessa planta apresenta ação emoliente, sendo bastante utilizada na proteção da pele contra agressões externas. Além disso, o óleo da Jojoba é utilizado em preparações cosméticas, mantendo a hidratação da pele, e possui ação analgésica, anti-inflamatória, antioxidante, antibacteriana.",
+      "cabelo": "Shampoos contendo cera de Jojoba apresentam ação condicionadora intensificada, aumentando a elasticidades e o brilho do cabelo. Além disso, vale salientar que não são gordurosos, podendo ser utilizado em vários tipos de cabelo.\n\nFonte: bdigital.ufp.pt",
+      "pele": "Pomadas e cremes com cera de Jojoba são indicados para peles secas e descamativas, evitando o envelhecimento cutâneo, protegendo e hidratando a pele. Além disso, cremes contendo sua cera também são úteis para evitar e combater as rugas.\n\nFonte: bdigital.ufp.pt",
+      "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
+      "fonteImagem": "https://br.depositphotos.com/stock-photos/hohoba.html",
+      "nomeImagem": "Jojoba"
+  },
+  {
     "popular": false,
     "nome": "Argila Branca",
     "tipo": "argila",
     "favorito": false,
     "text": "Argila natural rica em diversos compostos minerais responsáveis pela sua coloração e ação terapÊutica. Proveniente da transformação de rochas lavadas da água da chuva, sua coloração deve-se a ausência de alguns traços.",
-    "pele": "Possui propriedades cicatrizantes, além de facilitar a circulação sanguínea e promove ação antisséptica, sendo muito boa no controle do processo acneico, clareamento e no tônus geral da pele.",
+    "pele": "A Argila Branca possui propriedades cicatrizantes, além de facilitar a circulação sanguínea e promove ação antisséptica, sendo muito boa no controle do processo acneico, clareamento e no tônus geral da pele.\n\nFonte: siaibib01.univali.br",
     "fonte": "http://siaibib01.univali.br/pdf/Monthana%20Imai%20de%20Amorim.pdf",
-    "fonteImagem":"teste"
+    "fonteImagem":"https://www.florafiora.com.br/argila-branca-p442",
+    "nomeImagem": "ArgilaBranca"
   },
   {
     "popular": true,
@@ -71,11 +110,12 @@
     "tipo": "argila",
     "favorito": false,
     "minText": "Utilizada em tratamentos de pele, atua no combate a celulites e oleosidade.",
-    "text": "A mais tradicional das argilas, rica em silício e zinco oferece atividade sebo-regulador e purificadora. Sua coloração deve-se a presença de óxido de ferro, que atua em sinergia com outros minerais presentes.",
-    "pele": "Na estética corporal promove tensionamento, melhorando a flacidez tissular e auxilia no combate da celulite. Na estética facial é indicada para peles oleosas, pois atua regulando a oleosidade devido as suas propriedades sebo-regulador.",
+    "text": "A Argila Verde é a mais tradicional das argilas, rica em silício e zinco oferece atividade sebo-regulador e purificadora. Sua coloração deve-se a presença de óxido de ferro, que atua em sinergia com outros minerais presentes.",
+    "pele": "Na estética corporal promove tensionamento, melhorando a flacidez tissular e auxilia no combate da celulite. Na estética facial é indicada para peles oleosas, pois atua regulando a oleosidade devido as suas propriedades sebo-regulador.\n\nFonte: siaibib01.univali.br",
     "fonte": "http://siaibib01.univali.br/pdf/Monthana%20Imai%20de%20Amorim.pdf",
-    "fonteImagem":"teste",
-    "nomeImagemPopular": "ArgilaVerdePop"
+    "fonteImagem":"https://www.produtosnaturaismultimarcas.com/produtos-naturais-organicos-suplementos/nossos-produtos/temperos-grãos-cereais-agranel/argila-verde-adstringente-pacote-1-kg-detail.html",
+    "nomeImagemPopular": "ArgilaVerdePop",
+    "nomeImagem": "ArgilaVerde"
   },
   {
     "popular": false,
@@ -83,9 +123,31 @@
     "tipo": "argila",
     "favorito": false,
     "text": "Essa argila é rica em silício e magnésio na sua composição, e atua principalmente estimulando a síntese do colágeno na pele.",
-    "pele": "A argila roxa possui efeito de bioeletroestimulação, promovendo a nutrição celular, além de auxiliar na eliminação de toxinas para o meio extracelular.",
+    "pele": "A Argila Roxa possui efeito de bioeletroestimulação, promovendo a nutrição celular, além de auxiliar na eliminação de toxinas para o meio extracelular.\n\nFonte: siaibib01.univali.br",
     "fonte": "http://siaibib01.univali.br/pdf/Monthana%20Imai%20de%20Amorim.pdf",
-    "fonteImagem":"teste"
-    
+    "fonteImagem": "https://summumnaturais.com.br/produtos/argila-roxa/",
+    "nomeImagem": "ArgilaRoxa"
+  },
+  {
+    "popular": false,
+    "nome": "Argila Vermelha",
+    "tipo": "argila",
+    "favorito": false,
+    "text": "Essa argila é rica em óxido de ferro, o qual é muito utilizado na respiração celular e na transferência de elétrons. Sua composição corresponde a uma mistura de quartzo, esmectita, illita e caolinita.",
+    "pele": "A Argila Vermelha possui ação reguladora do fluxo sanguíneo e vascular, garantindo conforto e suavidade nas peles sensíveis ou acometidas por rosácea. Além disso, possui outros efeitos quando aplicada no corpo, como antiflacidez e ativação da microcirculação.\n\nFonte: siaibib01.univali.br",
+    "fonte": "http://siaibib01.univali.br/pdf/Monthana%20Imai%20de%20Amorim.pdf",
+    "fonteImagem": "https://aromatools.com.br/produto/argila-laranja/?v=19d3326f3137",
+    "nomeImagem": "ArgilaVermelha"
+  },
+  {
+    "popular": false,
+    "nome": "Argila Preta",
+    "tipo": "argila",
+    "favorito": false,
+    "text": "Essa argila é mais rara do que as outras, pois é obtida em grandes profundidades e sua composição é majoritariamente orgânica. Ela possui ação anti-inflamatória, cicatrizante, antiartrósica e antitumoral.",
+    "pele": "A Argila Preta é muito utilizada em fangoterapia, também conhecido como os famosos banho de lama, possuindo diversos efeitos devido a sua composição rica em minerais.\n\nFonte: siaibib01.univali.br",
+    "fonte": "http://siaibib01.univali.br/pdf/Monthana%20Imai%20de%20Amorim.pdf",
+    "fonteImagem": "https://www.imperiodasessencias.com.br/argila-preta-200g-p613970",
+    "nomeImagem": "ArgilaPreta"
   }
 ]
