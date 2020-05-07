@@ -70,13 +70,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.register(My2CollectionViewCell.self)
             cell.configure(with: filtro(data: self.data, filtro: "popular"), delegate: self)
         case 1:
+            
             cell.titulo(title: "Favoritos")
-
+            cell.register(MyCollectionViewCell.self)
+            cell.configure(with: filtro(data: self.data, filtro: "favoritos"), delegate: self)
             if filtro(data: self.data, filtro: "favoritos").isEmpty {
-                cell.favorito()
+                cell.emptyStateFavorito()
             } else {
-                cell.register(MyCollectionViewCell.self)
-                cell.configure(with: filtro(data: self.data, filtro: "favoritos"), delegate: self)
+                cell.removeEmptyStateFavorito()
             }
             
         case 2:

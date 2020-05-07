@@ -37,25 +37,14 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     var delegate: CellDelegate?
     
     
-    
-    func favorito() {
-      
+    func emptyStateFavorito() {
         headerButton.isHidden = true
-        
-        let image : UIImage = UIImage(named:"NoFavorite")!
-        let imagem = UIImageView (image: image)
-        self.addSubview(imagem)
-        
-       imagem.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            imagem.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
-            imagem.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
-            imagem.topAnchor.constraint(equalTo: headerTitle.bottomAnchor, constant: 20),
-            imagem.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
-            
-        ])
-        
+        imagem.isHidden = false
+    }
+    
+    func removeEmptyStateFavorito() {
+        imagem.isHidden = true
+        headerButton.isHidden = false
     }
     
     //Defini o título da seção da table
@@ -85,6 +74,23 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         collectionView.delegate = self
         collectionView.dataSource = self
         headerButton.addTarget(self, action: #selector(tap), for: .touchUpInside)
+        configureEmptyState()
+    }
+    
+    private func configureEmptyState() {
+        let image : UIImage = UIImage(named:"NoFavorite")!
+        imagem = UIImageView (image: image)
+        self.addSubview(imagem)
+        imagem.isHidden = true
+        
+        imagem.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            imagem.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 20),
+            imagem.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -20),
+            imagem.topAnchor.constraint(equalTo: headerTitle.bottomAnchor, constant: 20),
+            imagem.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -20)
+        ])
     }
     
     @objc func tap() {
