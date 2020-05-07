@@ -75,15 +75,15 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
     }
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        guard !searchText.isEmpty else {
-            currentData = data
+        if searchText.isEmpty {
+            self.searchBar(searchBar, selectedScopeButtonIndexDidChange: section!)
             lista.reloadData()
-            return
+        } else {
+            self.searchBar(searchBar, selectedScopeButtonIndexDidChange: section!)
+            currentData = currentData.filter({ itemData -> Bool in itemData.nome!.lowercased().contains(searchText.lowercased())
+                    })
+            
         }
-        //verifica se o texto digitado na searchbar é referente ao nome de algum item no json
-        currentData = currentData.filter({ itemData -> Bool in
-            itemData.nome!.lowercased().contains(searchText.lowercased())
-        })
         lista.reloadData() //atualiza a tableView
     }
     //função pra filtrar de acordo com o scopo selecionado
