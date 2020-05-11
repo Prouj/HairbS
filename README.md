@@ -12,7 +12,7 @@ Pull requests are welcome. For major changes, please open an issue first to disc
 Please make sure to update tests as appropriate.
 
 ## Team
-Larissa Uchôa - github.com/ltuchoa
-Nathália Moura - github.com/nathaliacm
-Paulo Uchôa - github.com/prouj
-Ana Karolina - github.com/karolyneehcs
+Larissa Uchôa - github.com/ltuchoa<br/>
+Nathália Moura - github.com/nathaliacm<br/>
+Paulo Uchôa - github.com/prouj<br/>
+Ana Karolina - github.com/karolyneehcs<br/>
