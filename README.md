@@ -5,7 +5,7 @@ HairbS is an app that helps you to know more about natural products and their ap
 ## Images
 
 
-![TelaDescrição_page-0001](https://user-images.githubusercontent.com/53300658/81573709-3785d680-937b-11ea-82fa-87191406886a.jpg?w=300)
+![TelaDescrição_page-0001](https://user-images.githubusercontent.com/53300658/81573709-3785d680-937b-11ea-82fa-87191406886a.jpg?w=10)
 ![TelaInicial_page-0001](https://user-images.githubusercontent.com/53300658/81573713-38b70380-937b-11ea-8a22-dbd3f2fb3e11.jpg?w=300)
 ![TelaLista_page-0001](https://user-images.githubusercontent.com/53300658/81573719-3a80c700-937b-11ea-8a9d-790fce2d646a.jpg?w=300)
 
