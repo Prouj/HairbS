@@ -38,8 +38,8 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     
     
     func emptyStateFavorito() {
-        headerButton.isHidden = true
         imagem.isHidden = false
+        headerButton.isHidden = true
     }
     
     func removeEmptyStateFavorito() {

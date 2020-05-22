@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--HairbS-->
+        <!--Aloe Estética-->
         <scene sceneID="GNZ-MZ-bTP">
             <objects>
                 <viewController id="9kp-Pz-bK2" customClass="ViewController" customModule="HairbS" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RbJ-MN-yxo">
-                                <rect key="frame" x="0.0" y="96" width="375" height="571"/>
+                                <rect key="frame" x="0.0" y="104.5" width="375" height="562.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </tableView>
                         </subviews>
@@ -29,7 +29,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UTi-nc-d00"/>
                     </view>
-                    <navigationItem key="navigationItem" title="HairbS" id="634-FQ-XLn"/>
+                    <navigationItem key="navigationItem" title="Aloe Estética" id="634-FQ-XLn"/>
                     <connections>
                         <outlet property="table" destination="RbJ-MN-yxo" id="EtS-Tc-c3L"/>
                     </connections>

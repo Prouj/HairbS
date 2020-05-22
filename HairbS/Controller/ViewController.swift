@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var data = LoaderJson().itemData
 
+    let indexFav = IndexPath.init(row: 1, section: 0)
     
     //Filtra os dados que serão apresentados em cada linha da tableView
     func filtro(data: [ItemData], filtro: String) -> [ItemData] {
@@ -44,7 +45,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         data = LoaderJson().itemData
-        table.reloadData()
+        //table.reloadData()
+        table.reloadRows(at: [indexFav], with: .fade)
     }
     
     // TABLE FUNCTIONS
@@ -83,7 +85,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 2:
             cell.titulo(title: "Plantas")
             cell.register(MyCollectionViewCell.self)
-            cell.configure(with: filtro(data: self.data, filtro: "plantas"), delegate: self)
+            cell.configure(with: filtro(data: self.data, filtro: "plantas").shuffled(), delegate: self)
         case 3:
             cell.titulo(title: "Argilas")
             cell.register(MyCollectionViewCell.self)
