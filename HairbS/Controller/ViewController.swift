@@ -94,6 +94,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             cell.register(MyCollectionViewCell.self)
             // Adicionado um shuffle nas argilas
             cell.configure(with: filtro(data: self.data, filtro: "argila").shuffled(), delegate: self)
+            cell.removeEmptyStateFavorito()
         default:
             cell.titulo(title: "😵")
         }

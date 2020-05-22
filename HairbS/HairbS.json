@@ -149,5 +149,31 @@
     "fonte": "http://siaibib01.univali.br/pdf/Monthana%20Imai%20de%20Amorim.pdf",
     "fonteImagem": "https://www.imperiodasessencias.com.br/argila-preta-200g-p613970",
     "nomeImagem": "ArgilaPreta"
+  },
+  {
+     "popular": false,
+     "nome": "Centelha Asiática",
+     "nomeCientifico": "Centella asiatica",
+     "tipo": "planta",
+     "favorito": false,
+     "text": "Seus extratos são úteis no tratamento a diversas dermatoses e aceleram o processo de cicatrização em ferimentos superficiais, para além das aplicação na pele, também é boa para o crecimento e regeneração capilar.",
+     "cabelo": "Shampoos com fórmulas contendo seu extrato aquoso são boas opções para ajudar no crecimento e combater a queda de cabelo, devido a característica de promover a regeneração das células nível do bulbo capilar.\n\nFonte: bdigital.ufp",
+     "pele": "Cremes e óleos feitos a partir de seu extrato glicólico são bons protetores solares e tem um ótimo efeito de cicatrização da pele evitando assim o envelhecimento da pele, hipertrofia de cicatrizes, também combatendo celulites e a flacidez dos tecidos mamários.\n\nFonte: bdigital.ufp ",
+     "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
+     "fonteImagem": " http://vineveracosmetics.com/tag/history-of-centella-asiatica/",
+     "nomeImagem": "CentelhaAsiática"
+   },
+  {
+    "popular": false,
+    "nome": "Soja",
+    "nomeCientifico": "Glycine max",
+    "tipo": "planta",
+    "favorito": false,
+    "text": "Produtos contendo os seus extratos são bons aliados na proteção a regiões sensíveis da pele, ajudando na hidradacão e nutriçao, sendo também grande aliado do combate aos danos causados pela luz solar. ",
+    "pele": "Seus cremes e loções são bons protetores solares devido aos efeitos anticarcinogénicos, e pela sua potente ação antioxidante ao inibir danos provocados pela radiação UV, além disso também apresenta propriedades hidratantes, atividade regeneradora da pele, assim como ação despigmentante.\n\nFonte: bdigital.ufp ",
+    "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
+    "fonteImagem": " https://digital.agrishow.com.br/soja/como-n-o-errar-no-manejo-de-aduba-o-de-soja",
+    "nomeImagem": "Soja"
   }
+  
 ]
