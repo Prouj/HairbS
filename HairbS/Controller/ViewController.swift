@@ -15,6 +15,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     var data = LoaderJson().itemData
 
+    let indexFav = IndexPath.init(row: 1, section: 0)
     
     //Filtra os dados que serão apresentados em cada linha da tableView
     func filtro(data: [ItemData], filtro: String) -> [ItemData] {
@@ -44,7 +45,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         data = LoaderJson().itemData
-        table.reloadData()
+        
+        // Trocado o metodo de reload para que ao abrir o app a table seja carregada uma única vez, e posteriormente só será atualizado a table de favoritos.
+        //table.reloadData()
+        table.reloadRows(at: [indexFav], with: .fade)
     }
     
     // TABLE FUNCTIONS
@@ -83,11 +87,14 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         case 2:
             cell.titulo(title: "Plantas")
             cell.register(MyCollectionViewCell.self)
-            cell.configure(with: filtro(data: self.data, filtro: "plantas"), delegate: self)
+            // Adicionado um shuffle nas plantas
+            cell.configure(with: filtro(data: self.data, filtro: "plantas").shuffled(), delegate: self)
         case 3:
             cell.titulo(title: "Argilas")
             cell.register(MyCollectionViewCell.self)
-            cell.configure(with: filtro(data: self.data, filtro: "argila"), delegate: self)
+            // Adicionado um shuffle nas argilas
+            cell.configure(with: filtro(data: self.data, filtro: "argila").shuffled(), delegate: self)
+            cell.removeEmptyStateFavorito()
         default:
             cell.titulo(title: "😵")
         }
