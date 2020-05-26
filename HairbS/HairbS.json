@@ -174,6 +174,45 @@
     "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
     "fonteImagem": " https://digital.agrishow.com.br/soja/como-n-o-errar-no-manejo-de-aduba-o-de-soja",
     "nomeImagem": "Soja"
-  }
+  },
+  {
+    "popular": false,
+    "nome": "Rícino",
+    "nomeCientifico": "Ricinus communis",
+    "tipo": "planta",
+    "favorito": false,
+    "text": "Seus derivados possuem propriedades suavizantes e hidratantes para a pele, sendo utilizados principalmente em peles ásperas e acnes. Além disso, possuem ação condicionante muito boa.",
+    "cabelo": "Shampoos com fórmulas contendo óleo de Rícino podem ser aplicados em cabelos finos exercendo ação condicionadora, e também antioxidantes.\n\nFonte: bdigital.ufp",
+    "pele": "Cremes contendo o óleo essencial de Rícino podem ser aplicados em peles secas, pela sua ação protetora, suavizante e elevado grau de oclusividade concedido, sendo úteis na manutenção e proteção da pele de crianças.\n\nFonte: bdigital.ufp ",
+    "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
+    "fonteImagem": "https://d2zslz3xpknhhw.cloudfront.net/Custom/Content/Products/06/60/0660_oleo-de-ricino-ov-ric_m1_637208416503587993.jpg",
+    "nomeImagem": "Ricino"
+  },
+  {
+     "popular": false,
+     "nome": "Hamamélia",
+     "nomeCientifico": "Hamamelis virginiana",
+     "tipo": "planta",
+     "favorito": false,
+     "text": "Seus extratos possuem ação anti-hemorrágica o que proporciona efeitos como o de fortificação capilar, também sendo úteis para aplicações tópicas em inflamações da pele e mucosas, queimaduras solares.",
+     "cabelo": "Tem característica de reduzir a permeabilidade capilar, também tendo uma ação vasoprotetora e vasoconstrutora, que resulta em um aumento da resistências do cabelo.\n\nFonte: bdigital.ufp",
+     "pele": "Cremes e loções que contem o extrato glicerinado de suas folhas são excelentes para no restauro da estrutura da pele, sendo também úteis no combate a olheiras, rugas em peles oleosas. Também sendo feita a utilização do hidrolato das folhas em loções desmaquilhantes.\n\nFonte: bdigital.ufp ",
+     "fonte": "https://bdigital.ufp.pt/bitstream/10284/3574/3/T_JoanaRuivo.pdf",
+     "fonteImagem": "https://www.tuasaude.com/hamamelis/ ",
+     "nomeImagem": "Hamamélia"
+   },
+     {
+     "popular": false,
+     "nome": "Coco",
+     "nomeCientifico": "Cocos nucidera L.",
+     "tipo": "planta",
+     "favorito": false,
+     "text": "O seu óleo é pode ser utilizado tanto no cabelo como na pele, tendo efeito hidratante nos cabelo e atuando como protetor para a pele, podem também ser utilizado para tratar regioões secas e descamadas da pele .",
+     "cabelo": " Pode ser utilizado para a umectação capilar(banhos utilizando óleo no cabelo), onde traz excelentes resultados, hidratando e nutrindo os fio, restaurando a vitalidade e devolvendo o brilho e a macies do cabelo.\n\nFonte: www.farmaceuticas.com.br ",
+     "pele": "Seus óleo quando aplicado na pele proporciona uma ótima nutrição na pele, devido a ser composto por ácidos graxos e lipídeos, também cria uma barreira que ajuda a manter a umidade da pele, auxiliando assim na manutenção da saúde do tecido conjuntivo, reduzindo também o aparecimento de rugas.\n\nFonte: www.farmaceuticas.com.br",
+     "fonte": "https://www.farmaceuticas.com.br/oleo-de-coco-e-suas-propriedades/",
+     "fonteImagem": "https://www.portalsaudenoar.com.br/tag/cocos-nucifera-l/",
+     "nomeImagem": "Coco"
+   }
   
 ]
