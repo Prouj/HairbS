@@ -91,6 +91,7 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
         switch selectedScope {
         case 0:
             currentData = data
+            lista.restore()
         case 1:
             currentData = data.filter({ itemData -> Bool in
                 itemData.favorito!
@@ -104,10 +105,12 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
             currentData = data.filter({ itemData -> Bool in
                 itemData.tipo! == "planta"
             })
+            lista.restore()
         case 3:
-        currentData = data.filter({ itemData -> Bool in
-            itemData.tipo! == "argila"
-        })
+            currentData = data.filter({ itemData -> Bool in
+                itemData.tipo! == "argila"
+            })
+            lista.restore()
         default:
             break
         }
