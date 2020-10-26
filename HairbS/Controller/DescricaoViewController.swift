@@ -10,10 +10,11 @@ import UIKit
 
 class DescricaoViewController: UIViewController {
     
-    @IBOutlet weak var descricaoCardView: DescricaoCard!
-    
+    @IBOutlet weak var titleName: UILabel!
+    @IBOutlet weak var image: UIImageView!
+    @IBOutlet weak var descriptionItem: UILabel!
     @IBOutlet weak var peleButton: UIButton!
-    
+    @IBOutlet weak var subTitle: UILabel!
     @IBOutlet weak var cabeloButton: UIButton!
     
     var item = ItemData() //variavel que recebe as informações do item selecionado na tableView
@@ -51,25 +52,25 @@ class DescricaoViewController: UIViewController {
         }
         
         let imageName = item.nomeImagem ?? "Erro"
-        let image = UIImage(named: imageName) //pega a imagem no assets
+        let Asset = UIImage(named: imageName) //pega a imagem no assets
         
-        descricaoCardView.imageView.image = image //seta a imagem no imageView
-        descricaoCardView.imageView.layer.cornerRadius = 48 //porque o tamanha padrão da imageView é 96x96
+        image.image = Asset //seta a imagem no imageView
+        image.layer.cornerRadius = 48 //porque o tamanha padrão da imageView é 96x96
         
         //seta os valores dos objetos de acordo com o json
         
         guard let nome = item.nome, let descricao = item.text else {
             return
         }
-        descricaoCardView.nomeLabel.text = nome
-        descricaoCardView.descricaoTextView.text = descricao
+        titleName.text = nome
+        descriptionItem.text = descricao
         title = nome
         
         guard let nomeCientifico = item.nomeCientifico else {
-            descricaoCardView.nomeCientificoLabel.isHidden = true
+            subTitle.isHidden = true
             return
         }
-        descricaoCardView.nomeCientificoLabel.text = nomeCientifico
+        subTitle.text = nomeCientifico
         // Do any additional setup after loading the view.
     }
     
