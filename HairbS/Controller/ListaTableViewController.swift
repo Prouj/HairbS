@@ -32,6 +32,7 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
         carregaSection()
         
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
 
         view.addGestureRecognizer(tap)
     }
