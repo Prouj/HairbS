@@ -30,6 +30,14 @@ class ListaTableViewController:UIViewController, UITableViewDataSource, UITableV
         search.delegate = self
         
         carregaSection()
+        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
     
     override func viewDidAppear(_ animated: Bool) {
