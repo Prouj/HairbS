@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZOT-5P-SYq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ZOT-5P-SYq">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -17,17 +19,17 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="RbJ-MN-yxo">
                                 <rect key="frame" x="0.0" y="96" width="375" height="571"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="UTi-nc-d00"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="RbJ-MN-yxo" firstAttribute="leading" secondItem="UTi-nc-d00" secondAttribute="leading" id="8Yh-qp-yQU"/>
                             <constraint firstItem="UTi-nc-d00" firstAttribute="bottom" secondItem="RbJ-MN-yxo" secondAttribute="bottom" id="hfK-d7-inZ"/>
                             <constraint firstItem="RbJ-MN-yxo" firstAttribute="top" secondItem="UTi-nc-d00" secondAttribute="top" id="iV1-7E-KOD"/>
                             <constraint firstItem="RbJ-MN-yxo" firstAttribute="trailing" secondItem="UTi-nc-d00" secondAttribute="trailing" id="tei-01-zyP"/>
                         </constraints>
-                        <viewLayoutGuide key="safeArea" id="UTi-nc-d00"/>
                     </view>
                     <navigationItem key="navigationItem" title="HairbS" id="634-FQ-XLn"/>
                     <connections>
@@ -71,4 +73,9 @@
             <point key="canvasLocation" x="-330.39999999999998" y="-283.80809595202402"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

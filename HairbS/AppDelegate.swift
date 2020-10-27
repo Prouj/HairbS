@@ -15,10 +15,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        if UserDefaults.standard.bool(forKey: "First Launch") == true {
+        if UserDefaults.standard.bool(forKey: "First Launch") == false {
             LoaderJson().loadInicial()
         }
-        UserDefaults.standard.set(false, forKey: "First Launch")
+        UserDefaults.standard.set(true, forKey: "First Launch")
         //Override point for customization after application launch.
         
         return true

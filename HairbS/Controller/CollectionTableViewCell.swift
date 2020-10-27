@@ -38,8 +38,8 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
     
     
     func emptyStateFavorito() {
-        headerButton.isHidden = true
         imagem.isHidden = false
+        headerButton.isHidden = true
     }
     
     func removeEmptyStateFavorito() {
@@ -127,7 +127,7 @@ class CollectionTableViewCell: UITableViewCell, UICollectionViewDelegate, UIColl
         
         //Altera o tamanho da célula dependendo do tipo
         if cellIdentifier == MyCollectionViewCell.identifier {
-            return CGSize(width: 85, height: 100)
+            return CGSize(width: 120, height: 100)
         } else {
             return CGSize(width: 275, height: 150)
         }
