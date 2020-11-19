@@ -1,0 +1,23 @@
+name: Workflow
+
+on:
+  push:
+    branches: [ Developer ]
+  pull_request:
+    branches: [ Developer ]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+    strategy:
+        matrix:
+          destination: ['platform=iOS Simulator,OS=14.0,name=iPhone 11']
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Build
+      run: |
+        xcodebuild -project HairbS.xcodeproj -scheme HairbS -destination "${destination}" 
+      env: 
+        destination: ${{ matrix.destination }}
